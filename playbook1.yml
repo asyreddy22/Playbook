@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Deploying war file into Ansible Nodes
+    copy:
+      src: ./webapp.war
+      dest: /root/tomcat/webapps/
